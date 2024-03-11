@@ -1,8 +1,8 @@
 import pandas as pd
 
-tiered= pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='New-Tiered',nrows=7)
-tou=pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='TOU',nrows=7)
-evtou = pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='TOU-EV',nrows=7)
+tiered= pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='New-Tiered',nrows=9)
+tou=pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='TOU',nrows=9)
+evtou = pd.read_excel('Consolidated Rate Info.xlsx',sheet_name='TOU-EV',nrows=9)
 
 with pd.ExcelWriter('Consolidated Rate Info - tall.xlsx') as writer:
     pd.melt(tiered, value_vars=['Tier 1 Rate ($/kWh)','Tier 2 Rate ($/kWh)','Tier 3 Rate ($/kWh)'],
